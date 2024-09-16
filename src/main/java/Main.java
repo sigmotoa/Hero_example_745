@@ -26,6 +26,11 @@ public class Main {
         System.out.println("Las habilidades son: ");
         ironMan.useSkill();
 
+
+        /*
+        Generar las funciones para crear un heroe por
+        parte del usuario a través de la consola.
+         */
     }
 
 }
