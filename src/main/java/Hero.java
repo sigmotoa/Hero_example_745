@@ -4,13 +4,22 @@ public class Hero {
     String alias;
     String actor;
     String gender;
-    String [] skill;
+    Skill [] skill;
     int age;
+
+    @Override
+    public String toString()
+    {
+        System.out.println(this.alias+" tiene estos poderes: ");
+        useSkill();
+        return this.name+" ->"+this.actor;
+
+    }
 
     public void useSkill()
     {
-        for (String s : skill) {
-            System.out.println(s);
+        for (Skill s : skill) {
+            System.out.println(s.skillName);
         }
     }
 
@@ -25,4 +34,21 @@ public class Hero {
     }
 }
 
-//Profe como hago para cambiar mi nombre 
+class Skill{
+    String skillName;
+    Level skillLevel;
+
+    public Skill(String skillName, Level skillLevel) {
+        this.skillName = skillName;
+        this.skillLevel = skillLevel;
+    }
+}
+
+enum Level{
+    zero,
+    basic,
+    medium,
+    hard,
+    expert,
+    unlimited
+}
