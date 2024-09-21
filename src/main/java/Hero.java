@@ -14,4 +14,15 @@ public class Hero {
         }
     }
 
+    public Hero(String name, String alias) {
+        this.name = name;
+        this.alias = alias;
+    }
+
+    public Hero()
+    {
+
+    }
 }
+
+//Profe como hago para cambiar mi nombre 
