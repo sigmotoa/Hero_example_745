@@ -39,8 +39,10 @@ public class Main {
 
 
         System.out.println(spiderMan);
+        System.out.println();
         System.out.println(ironMan);
-        System.out.println(thor);
+        System.out.println();
+        System.out.println(thor.age);
         //System.out.println("El nombre es: " + spiderMan.name);
         //System.out.println("Las habilidades son: ");
         //spiderMan.useSkill();

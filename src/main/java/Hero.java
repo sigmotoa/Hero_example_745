@@ -10,8 +10,10 @@ public class Hero {
     @Override
     public String toString()
     {
+        System.out.println("========================================");
         System.out.println(this.alias+" tiene estos poderes: ");
         useSkill();
+
         return this.name+" ->"+this.actor;
 
     }
@@ -19,7 +21,7 @@ public class Hero {
     public void useSkill()
     {
         for (Skill s : skill) {
-            System.out.println(s.skillName);
+            System.out.println(s.skillName+"->"+s.skillLevel);
         }
     }
 
