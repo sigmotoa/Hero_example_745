@@ -1,13 +1,17 @@
-public class Hero {
+import java.util.Scanner;
+
+public class Hero extends Person {
 
     String name;
     String alias;
-    String actor;
+    Person actor;
     private String gender;
     Skill [] skill;
     private int age;
     private int year = 2024;
     private int born;
+
+
 
     public void setBorn(int born) {
         this.born = born;
@@ -43,6 +47,15 @@ public class Hero {
         ageCalculation();
     }
 
+    public Hero(String name, String alias, int born)
+    {
+        
+        this.name=name;
+        this.alias=alias;
+        this.born=born;
+        ageCalculation();
+    }
+
     public Hero(String name, String alias) {
         this.name = name;
         this.alias = alias;
@@ -50,12 +63,17 @@ public class Hero {
 
     public Hero()
     {
-
     }
     
     private void ageCalculation()
     {
         this.age=year-this.born;
+    }
+
+    public void showAll()
+    {
+        System.out.println(this.name);
+        System.out.println(this.actor.name);
     }
 }
 

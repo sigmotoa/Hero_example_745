@@ -14,9 +14,10 @@ public class Main {
         System.out.println(spiderMan.getGender());
 
 
-        Hero ironMan = new Hero("Tony Stark", "Iroman");
-        ironMan.actor = "Robert Downey Jr";
-        ironMan.gender = "Male";
+
+        Hero ironMan = new Hero("Tony Stark", "Iroman",1988);
+        ironMan.actor = new Person( "Robert Downey Jr.", "EEUU", 1965, "male");
+        ironMan.setGender("Male"); //EMMANUEL WAS HERE
         ironMan.skill = new Skill[]{
                 new Skill("billonary", Level.unlimited),
                 new Skill("Fly", Level.medium),
@@ -29,9 +30,9 @@ public class Main {
         System.out.println(ironMan.getGender());
 
         //Hero thor = new Hero();
-        Hero thor = new Hero("Thor Odinson", "Thor");
-        thor.actor = "Chris Hems";
-        thor.gender = "Male";
+        Hero thor = new Hero("Thor Odinson", "Thor", 1941);
+        thor.actor = new Person("Chris Hemsworth", "Australia", 1983, "male");
+        thor.setGender("male");
         thor.skill = new Skill[]{
                 new Skill("Storm Breaker", Level.medium),
                 new Skill("Mijolnir", Level.expert),
