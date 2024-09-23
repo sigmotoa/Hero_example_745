@@ -3,10 +3,26 @@ public class Hero {
     String name;
     String alias;
     String actor;
-    String gender;
+    private String gender;
     Skill [] skill;
-    int age;
+    private int age;
+    private int year = 2024;
+    private int born;
 
+    public void setBorn(int born) {
+        this.born = born;
+    }
+
+    public void setGender(String gender)
+    {
+        this.gender=gender;
+    }
+    
+    public String getGender()
+    {
+        return this.gender;
+    }
+    
     @Override
     public String toString()
     {
@@ -14,6 +30,7 @@ public class Hero {
         System.out.println(this.alias+" tiene estos poderes: ");
         useSkill();
 
+        System.out.println("Tiene "+this.age);
         return this.name+" ->"+this.actor;
 
     }
@@ -23,6 +40,7 @@ public class Hero {
         for (Skill s : skill) {
             System.out.println(s.skillName+"->"+s.skillLevel);
         }
+        ageCalculation();
     }
 
     public Hero(String name, String alias) {
@@ -33,6 +51,11 @@ public class Hero {
     public Hero()
     {
 
+    }
+    
+    private void ageCalculation()
+    {
+        this.age=year-this.born;
     }
 }
 
